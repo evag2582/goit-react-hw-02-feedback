@@ -1,0 +1,10 @@
+.listButton{
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    width: 100px;
+}
+.listResults{
+    display: grid;
+    gap: 5px;
+}

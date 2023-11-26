@@ -1,16 +1,21 @@
+import { Component } from "react";
+
+import State from './Statistics';
+import state from "../json/state";
+
+
 export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
+        display: 'block',
+        fontSize: 20,
+        color: '#010101',
+        fontWeight: '500',
       }}
     >
-      React homework template
+      Please leave Feedback
+      <State title="Statistics" state={state} />
     </div>
   );
 };
