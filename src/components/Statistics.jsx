@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import css from './State.module.css';
 import FeedbackOptions from './FeedbackOptions';
+import Notification from './Notification';
 
 class App extends Component {
   state = {
@@ -37,22 +38,15 @@ class App extends Component {
     return (
       <section>
         <FeedbackOptions onFeedbackClick={this.handleClick} />
-
         {this.props.title && <h2>{this.props.title}</h2>}
-
-        {showStatistics ? (
-          <ul>
-            <li className={css.listResults}>
-              <span>Good: {this.state.good}</span>
-              <span>Neutral: {this.state.neutral}</span>
-              <span>Bad: {this.state.bad}</span>
-              <span>Total: {total}</span>
-              <span>Positive Feedback: {positivePercentage}%</span>
-            </li>
-          </ul>
-        ) : (
-          <p>There is no feedback</p>
-        )}
+        <Notification
+          showStatistics={showStatistics}
+          good={this.state.good}
+          neutral={this.state.neutral}
+          bad={this.state.bad}
+          total={total}
+          positivePercentage={positivePercentage}
+        />
       </section>
     );
   }
