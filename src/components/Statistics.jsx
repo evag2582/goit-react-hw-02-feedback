@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import css from './State.module.css';
 import FeedbackOptions from './FeedbackOptions';
 import Notification from './Notification';
 
