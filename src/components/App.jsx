@@ -1,5 +1,3 @@
-import { Component } from "react";
-
 import State from './Statistics';
 import state from "../json/state";
 
